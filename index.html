@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="LogoOri.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mcs Engineering</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- React Icons (using CDN for Font Awesome and IonIcons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- OverNavbar Component -->
+    <div class="overnav">
+      <div class="on-data">
+        <div class="on-right">
+          <div data-aos="fade-down">À PROPOS</div>
+          <div data-aos="fade-down">CONTACTEZ-NOUS</div>
+          <div data-aos="fade-down">ACTUALITÉS</div>
+        </div>
+        <div>
+          <div>contact@mcs.ma</div>
+          <i
+            class="ion-ios-email"
+            style="font-size: 1rem; color: #f5f5f5c2"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Component -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo" data-aos="fade-down" data-aos-delay="100">
+          <a href="index.html">
+            <img src="LogoOri.png" alt="Company Logo" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu" data-aos="fade-down" data-aos-delay="200">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+            <a href="index.html" class="nav-links">Accueil</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+            <a href="service.html" class="nav-links">Services</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+            <a href="contact.html" class="nav-links">Contactez-Nous</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+            <a href="about.html" class="nav-links">À Propos</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Navigation -->
+        <div
+          class="mobile-menu-icon"
+          onclick="toggleMenu()"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
+          <i class="fas fa-bars" id="mobileMenuIcon"></i>
+        </div>
+        <ul
+          class="nav-menu-mobile"
+          id="mobileMenu"
+          style="display: none"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        >
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="400">
+            <a href="/" class="nav-links-mobile" onclick="closeMenu()"
+              >Accueil</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="500">
+            <a
+              href="service.html"
+              class="nav-links-mobile"
+              onclick="closeMenu()"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="600">
+            <a href="/contact" class="nav-links-mobile" onclick="closeMenu()"
+              >Contactez-Nous</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="700">
+            <a href="about.html" class="nav-links-mobile" onclick="closeMenu()"
+              >À Propos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide">
+          <img src="header4.jpeg" alt="Slide 1" class="slide-img" />
+          <div class="gradient-overlayes"></div>
+          <div class="slide-content">
+            <h2>Découvrez nos Services</h2>
+            <p>20 Ans d'Expérience</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="header2.jpeg" alt="Slide 2" class="slide-img" />
+          <div class="gradient-overlayes"></div>
+          <div class="slide-content" style="display: none">
+            <h2>Qualité Premium</h2>
+            <p>Découvrez les meilleurs produits de leur catégorie</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="header3.jpeg" alt="Slide 3" class="slide-img" />
+          <div class="gradient-overlayes"></div>
+          <div class="slide-content" style="display: none">
+            <h2>Solutions Innovantes</h2>
+            <p>Technologie de pointe pour répondre à vos besoins</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-button prev" onclick="prevSlide()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-button next" onclick="nextSlide()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <div class="dot-indicator">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+      </div>
+    </div>
+
+    <!-- Links Component -->
+    <div class="nav-wrapperr">
+      <nav class="nav-linkss">
+        <a data-aos="zoom-out" href="#solutions" class="nav-link">
+          Nos Solutions
+          <span class="link-underline"></span>
+        </a>
+        <a data-aos="zoom-out" href="#products" class="nav-link">
+          Nos Products
+          <span class="link-underline"></span>
+        </a>
+        <a data-aos="zoom-out" href="#partenaires" class="nav-link">
+          Nos Partenaires
+          <span class="link-underline"></span>
+        </a>
+        <a data-aos="zoom-out" href="#références" class="nav-link">
+          Nos Références
+          <span class="link-underline"></span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Solutions Component -->
+    <div id="solutions" class="solutions">
+      <div class="solutions-container">
+        <h2 data-aos="zoom-out" class="section-title">Our Solutions</h2>
+        <div class="underline"></div>
+        <div class="solutions-grid">
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img src="remote.jpeg" alt="Remote Maintenence" />
+              <div class="card-overlay">
+                <h3>Remote Maintenence</h3>
+              </div>
+            </div>
+          </div>
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img src="somthing.jpeg" alt="Caméra de Surveillance" />
+              <div class="card-overlay">
+                <h3>Caméra de Surveillance</h3>
+              </div>
+            </div>
+          </div>
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img src="Systèmes.jpg" alt="Systèmes anti-intrusion" />
+              <div class="card-overlay">
+                <h3>Systèmes anti-intrusion</h3>
+              </div>
+            </div>
+          </div>
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img
+                src="détection.jpg"
+                alt="Solutions de détection d'incendie, etc"
+              />
+              <div class="card-overlay">
+                <h3>Solutions de détection d'incendie, etc</h3>
+              </div>
+            </div>
+          </div>
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img src="armoire.jpeg" alt="Armoire électrique industrielle" />
+              <div class="card-overlay">
+                <h3>Armoire électrique industrielle</h3>
+              </div>
+            </div>
+          </div>
+          <div class="solution-card-wrapper">
+            <div class="solution-card">
+              <img src="IoT.jpg" alt="IoT" />
+              <div class="card-overlay">
+                <h3>IoT</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produits Component -->
+    <div id="products" class="produits">
+      <div class="produits-conteneur">
+        <h2 class="titre-section">Nos Produits</h2>
+        <div class="soulignement"></div>
+        <div class="grille-produits">
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img src="Routers.png" alt="Routeurs et modems" />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              Routeurs et modems
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img
+                src="LG5120-removebg-preview.png"
+                alt="IoT LoRaWAN Gateways"
+              />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              IoT LoRaWAN Gateways
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img src="radio.png" alt="Radio sans-fil" />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">Radio sans-fil</h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img
+                src="Avior_09-removebg-preview.png"
+                alt="Avior Remote Control"
+              />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              Avior Remote Control
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img src="Modbus.png" alt="Modules d'Entrées/Sorties" />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              Modules d'Entrées/Sorties
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img
+                src="Passerelle-removebg-preview.png"
+                alt="Passerelle Profibus vers Modbus TCP"
+              />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              Passerelle Profibus vers Modbus TCP
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img src="TM.png" alt="PLCs and Telemetry" />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              PLCs and Telemetry
+            </h3>
+          </div>
+          <div class="carte-produit">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="contenu-carte"
+            >
+              <img
+                src="686806686287.png"
+                alt="Compteur d'énergie multi-circuits sans fil"
+              />
+            </div>
+            <h3 data-aos="fade-up" data-aos-duration="2000">
+              Compteur d'énergie multi-circuits sans fil
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partenaires Component -->
+    <div id="partenaires" class="container">
+      <h2 class="section-title">Nos Partenaires</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="card-list">
+      <a href="#" class="card-item">
+        <img src="partners-logo3.png" alt="RG2I" />
+        <h3>RG2I</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partners-logo5.png" alt="HMS Networks" />
+        <h3>HMS Networks</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partners-logo1.png" alt="Metz Connect" />
+        <h3>Metz Connect</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partners-logo2.jpg" alt="Nke Watteco" />
+        <h3>Nke Watteco</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partner1.png" alt="Adeunis" />
+        <h3>Adeunis</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partners-logo6.png" alt="ECO-Adapt" />
+        <h3>ECO-Adapt</h3>
+      </a>
+      <a href="#" class="card-item">
+        <img src="partner2.png" alt="Enless Wireless" />
+        <h3>Enless Wireless</h3>
+      </a>
+    </div>
+
+    <!-- Partners Component -->
+    <section id="références" class="partnes-section">
+      <div class="container-ref">
+        <h2 class="section-title-blue">Nos Références</h2>
+        <div class="underline-blue"></div>
+        <div class="partnes-grid">
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./oncf.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./vivo-new-logo.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./logo_marsa.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./lesieu.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./vinci.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./samit.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./LOGO2.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./logo--laprophan-w.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./afrikia.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+          <div class="partne-card">
+            <div class="partne-logo-container">
+              <img src="./TMSA-Logo.png" class="partne-logo" />
+            </div>
+            <p class="partne-name"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Under Buttons -->
+    <div class="underButtons">
+      <a href="service.html">
+        <button>Votre Services</button>
+      </a>
+      <a href="about.html">
+        <button>Qui nous sommes ?</button>
+      </a>
+    </div>
+
+    <div class="map-wrapper">
+      <h2 class="map-title">📍 MCS Engineering Location</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d33157.14258338943!2d-7.395848999999999!3d33.704505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b655ec26cd7f%3A0xb7217dc13df110e8!2sMCS%20ENGINEERING!5e1!3m2!1sar!2sma!4v1753825701961!5m2!1sar!2sma"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="MCS Engineering Location"
+        ></iframe>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="logo">
+            <img class="logo-footer" src="LogoOri.png" alt="" />
+          </div>
+
+          <div class="social-icons">
+            <a
+              href="https://web.facebook.com/profile.php?id=61553961132659&_rdc=1&_rdr"
+              class="social-icon"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=0662074078&text&type=phone_number&app_absent=0"
+              class="social-icon"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/mesure-contr%C3%B4le-syst%C3%A8me/"
+              class="social-icon"
+            >
+              <FaLinkedin />
+            </a>
+            <a href="https://www.youtube.com/@mcs-xe7lq" class="social-icon">
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-middle">
+          <div class="links">
+            <a href="#" class="link"> Privacy </a>
+            <a href="#" class="link"> Policy </a>
+          </div>
+          <div class="nav-linksr">
+            <a href="/" class="nav-linkr"> Accueil </a>
+            <a href="service.html" class="nav-linkr"> Services </a>
+            <a href="/Contact" class="nav-linkr"> Contactez-Nous </a>
+            <a href="about.html" class="nav-linkr"> À Propos </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Copyright © 2025. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

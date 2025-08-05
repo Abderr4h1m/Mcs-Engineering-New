@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="LogoOri.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mcs Engineering - Contact</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- React Icons (using CDN for Font Awesome and IonIcons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- OverNavbar HTML -->
+    <!-- OverNavbar Component -->
+    <div class="overnav">
+      <div class="on-data">
+        <div class="on-right">
+          <div data-aos="fade-down">À PROPOS</div>
+          <div data-aos="fade-down">CONTACTEZ-NOUS</div>
+          <div data-aos="fade-down">ACTUALITÉS</div>
+        </div>
+        <div>
+          <div>contact@mcs.ma</div>
+          <i
+            class="ion-ios-email"
+            style="font-size: 1rem; color: #f5f5f5c2"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Component -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo" data-aos="fade-down" data-aos-delay="100">
+          <a href="/">
+            <img src="LogoOri.png" alt="Company Logo" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu" data-aos="fade-down" data-aos-delay="200">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+            <a href="/" class="nav-links">Accueil</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+            <a href="service.html" class="nav-links">Services</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+            <a href="/contact" class="nav-links">Contactez-Nous</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+            <a href="about.html" class="nav-links">À Propos</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Navigation -->
+        <div
+          class="mobile-menu-icon"
+          onclick="toggleMenu()"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
+          <i class="fas fa-bars" id="mobileMenuIcon"></i>
+        </div>
+        <ul
+          class="nav-menu-mobile"
+          id="mobileMenu"
+          style="display: none"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        >
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="400">
+            <a href="/" class="nav-links-mobile" onclick="closeMenu()"
+              >Accueil</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="500">
+            <a
+              href="service.html"
+              class="nav-links-mobile"
+              onclick="closeMenu()"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="600">
+            <a href="/contact" class="nav-links-mobile" onclick="closeMenu()"
+              >Contactez-Nous</a
+            >
+          </li>
+          <li class="nav-item-mobile" data-aos="fade-down" data-aos-delay="700">
+            <a href="about.html" class="nav-links-mobile" onclick="closeMenu()"
+              >À Propos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Form HTML -->
+    <div class="contact-container">
+      <div class="content">
+        <div class="left-side">
+          <div class="details address">
+            <i class="icon icon-map"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Mohammedia, Maroc</div>
+            <div class="text-two">Central Park Imm M.N°21</div>
+          </div>
+          <div class="details phone">
+            <i class="icon icon-phone"></i>
+            <div class="topic">Telephone</div>
+            <div class="text-one">+212 523-304 402</div>
+            <div class="text-two">+212 523-301 681</div>
+          </div>
+          <div class="details email">
+            <i class="icon icon-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">contact@mcs.ma</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Envoyez-nous un message</div>
+          <p>
+            Si vous avez du travail à me confier ou des questions concernant mon
+            tutoriel, vous pouvez m’envoyer un message depuis ici. C’est un
+            plaisir de vous aider.
+          </p>
+          <form id="contactForm">
+            <div class="input-box">
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Entrez votre nom"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Entrez votre e-mail"
+                required
+              />
+            </div>
+            <div class="input-box message-box">
+              <textarea
+                name="message"
+                placeholder="Entrez votre message"
+                required
+              ></textarea>
+            </div>
+            <div id="successMsg" class="success-message"></div>
+            <div class="button">
+              <input type="submit" value="Envoyer" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="logo">
+            <img class="logo-footer" src="LogoOri.png" alt="" />
+          </div>
+
+          <div class="social-icons">
+            <a
+              href="https://web.facebook.com/profile.php?id=61553961132659&_rdc=1&_rdr"
+              class="social-icon"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=0662074078&text&type=phone_number&app_absent=0"
+              class="social-icon"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/mesure-contr%C3%B4le-syst%C3%A8me/"
+              class="social-icon"
+            >
+              <FaLinkedin />
+            </a>
+            <a href="https://www.youtube.com/@mcs-xe7lq" class="social-icon">
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-middle">
+          <div class="links">
+            <a href="#" class="link"> Privacy </a>
+            <a href="#" class="link"> Policy </a>
+          </div>
+          <div class="nav-linksr">
+            <a href="/" class="nav-linkr"> Accueil </a>
+            <a href="service.html" class="nav-linkr"> Services </a>
+            <a href="/Contact" class="nav-linkr"> Contactez-Nous </a>
+            <a href="about.html" class="nav-linkr"> À Propos </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Copyright © 2025. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script to be included in script.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

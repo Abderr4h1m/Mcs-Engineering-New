@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="LogoOri.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCS Engineering - Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <!-- OverNavbar -->
+    <div class="overnav">
+      <div class="on-data">
+        <div class="on-right">
+          <div data-aos="fade-down">
+            <a
+              href="about.html"
+              style="text-decoration: none; color: rgb(192, 213, 235)"
+              >À PROPOS</a
+            >
+          </div>
+          <div data-aos="fade-down">
+            <a
+              href="contact.html"
+              style="text-decoration: none; color: rgb(192, 213, 235)"
+              >CONTACTEZ-NOUS</a
+            >
+          </div>
+          <div data-aos="fade-down">
+            <a
+              href="index.html"
+              style="text-decoration: none; color: rgb(192, 213, 235)"
+              >ACTUALITÉS</a
+            >
+          </div>
+        </div>
+        <div>
+          <div>contact@mcs.ma</div>
+          <span id="email-icon"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo" data-aos="fade-down" data-aos-delay="100">
+          <a href="index.html"><img src="LogoOri.png" alt="Company Logo" /></a>
+        </div>
+
+        <ul class="nav-menu" data-aos="fade-down" data-aos-delay="200">
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+            <a href="index.html" class="nav-links">Accueil</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+            <a href="service.html" class="nav-links">Services</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+            <a href="contact.html" class="nav-links">Contactez-Nous</a>
+          </li>
+          <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+            <a href="about.html" class="nav-links">À Propos</a>
+          </li>
+        </ul>
+
+        <div
+          class="mobile-menu-icon"
+          onclick="toggleMenu()"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
+          <span id="menu-icon"></span>
+        </div>
+        <ul class="nav-menu-mobile" id="mobileMenu"></ul>
+      </div>
+    </nav>
+
+    <!-- EinFuhrung -->
+    <div class="header-container">
+      <div class="gradient-overlay"></div>
+      <img src="servicess.jpeg" alt="Header" class="header-image" />
+      <h1 class="fade-text" id="animatedText">Services</h1>
+    </div>
+
+    <!-- SerLinks -->
+    <div class="service-nav-container">
+      <nav class="service-nav-list">
+        <a href="#services" class="service-nav-item" data-aos="zoom-out"
+          >Nos Services<span class="service-link-underline"></span
+        ></a>
+        <a href="#références" class="service-nav-item" data-aos="zoom-out"
+          >Nos Références<span class="service-link-underline"></span
+        ></a>
+      </nav>
+    </div>
+
+    <!-- SerCards -->
+    <div id="services" class="services-container">
+      <div
+        class="services-details-panel"
+        id="detailsPanel"
+        style="display: none"
+      >
+        <div class="services-details-content">
+          <button class="services-close-btn" onclick="closeDetails()">✕</button>
+          <h2 id="detailTitle"></h2>
+          <p class="services-details-description" id="detailDescription"></p>
+          <h3>Fonctionnalités :</h3>
+          <ul class="services-features-list" id="featuresList"></ul>
+        </div>
+      </div>
+      <div class="services-container-width">
+        <h2 data-aos="fade-down-right" class="section-title">Nos Services</h2>
+        <div data-aos="fade-down-right" class="underline"></div>
+        <div class="services-sercards-wrapper" id="servicesCards"></div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <section id="références" class="partnes-section">
+      <div class="container">
+        <h2 class="section-title-blue">Nos Références</h2>
+        <div class="underline-blue"></div>
+        <div class="partnes-grid" id="partnersGrid"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="logo">
+            <img class="logo-footer" src="LogoOri.png" alt="" />
+          </div>
+
+          <div class="social-icons">
+            <a
+              href="https://web.facebook.com/profile.php?id=61553961132659&_rdc=1&_rdr"
+              class="social-icon"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=0662074078&text&type=phone_number&app_absent=0"
+              class="social-icon"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/mesure-contr%C3%B4le-syst%C3%A8me/"
+              class="social-icon"
+            >
+              <FaLinkedin />
+            </a>
+            <a href="https://www.youtube.com/@mcs-xe7lq" class="social-icon">
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-middle">
+          <div class="links">
+            <a href="#" class="link"> Privacy </a>
+            <a href="#" class="link"> Policy </a>
+          </div>
+          <div class="nav-linksr">
+            <a href="/" class="nav-linkr"> Accueil </a>
+            <a href="service.html" class="nav-linkr"> Services </a>
+            <a href="/Contact" class="nav-linkr"> Contactez-Nous </a>
+            <a href="about.html" class="nav-linkr"> À Propos </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Copyright © 2025. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
