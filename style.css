@@ -26,16 +26,17 @@
   gap: 1.5rem;
 }
 
-.on-right div {
+.on-right a {
   color: #f5f5f5a9;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.on-right div:hover {
+.on-right a:hover {
   color: #f5f5f5;
 }
 
@@ -63,6 +64,9 @@
   }
   .on-right {
     gap: 0.8rem;
+  }
+  .on-right div {
+    letter-spacing: 0.1px;
   }
 }
 
@@ -337,7 +341,6 @@
 
 .dot.active {
   background-color: white;
-  width: 50px;
 }
 
 .underButtons {

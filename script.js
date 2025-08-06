@@ -397,3 +397,30 @@ partensPaginationDots.forEach((dot, index) => {
 // Initial setup
 partensUpdateSliderPosition();
 partensUpdatePagination();
+
+// Toggle mobile menu
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menu-icon");
+
+  // Toggle the menu visibility
+  if (mobileMenu.style.display === "flex") {
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "flex";
+  }
+
+  // Optional: Change icon (e.g., from ☰ to ✕)
+  // You can use different icons or classes
+}
+
+// Close the service details panel
+function closeDetails() {
+  const detailsPanel = document.getElementById("detailsPanel");
+  detailsPanel.style.display = "none";
+}
+
+// Initialize AOS (if not already done)
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init();
+});
